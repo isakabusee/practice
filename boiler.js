@@ -59,7 +59,13 @@ class Node {
 class SLL {
   constructor() {
       this.head = null;
+      this.size = 0;
   }
+  // Insert first node
+  insertFirst(data) {
+    this.head = new Node(data, this.head);
+  }
+
   // console log (print) data of every node in the current list
   read(){
       var current = this.head; // set current as the head, if it exists or not
@@ -89,6 +95,12 @@ class SLL {
       var temp = this.head;
     };
   }
-}
+
+
+const LL = new SLL();
+
+LL.insertFirst(100);
+
+console.log(LL);
 
 

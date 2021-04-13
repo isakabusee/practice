@@ -1,21 +1,117 @@
-// class SLL {
-//     constructor() {
-//         this.head = null;
-//     }
-//         isEmpty() {
-//             if(this.head === null) {
-//                 return true;
-//             }
-//             return false;
-//         }
-//         message() {
-//             console.log(message);
-//         }
+class Node {
+    constructor(data, next = null){
+        this.data = data;
+        this.next = next;
+    }
+}
+class LinkedList {
+    constructor(){
+        this.head = null;
+        this.size = 0;
+    }
+    // Insert first node
+    inserFirst(data){
+       this.head = new Node(data, this.head);
+       this.size++;
+    }
+    displayList(){
+        let current = this.head;
+        while(current){
+            console.log(current.data)
+            current = current.next;
+        }
 
-        
-        
-//     }
+    }
+    insertLast(data){
+        let node = new Node(data);
+        let current;
+        if(!this.head){
+            this.head = node;
+        } else {
+            current = this.head
 
+            while(current.next) {
+                current = current.next;
+            }
+            current.next = node;
+        }
+        this.size++;
+    }
+    // Insert at index
+    insertAt(data, index){
+        // If index is out of range
+        if(index > 0 && index > this.size){
+            return;
+        }
+        // if first index
+        if(index === 0) {
+            this.head = new Node(data, this.head);
+            return
+        }
+        const node = new Node(data);
+        let current, previous;
+
+        // set current to first
+        current = this.head;
+        let count = 0;
+
+        while(count < index) {
+            previous = current; // Node before index
+            count++;
+            current = current.next; // Node after the index
+        }
+        node.next = current;
+        previous.next = node;
+        this.size++;
+    }
+    // Get at index
+    getAt(index){
+        let current = this.head;
+        let count = 0;
+        while(current){
+            if(count == index) {
+                console.log(current.data);
+            }
+            count++;
+            current = current.next;
+        }
+        return null;
+    }
+    removeAt(index) {
+        if(index > 0 && index > this.size) {
+            return;
+        }
+        let current = this.head;
+        let previous;
+        let count = 0;
+
+        // Remove first
+        if(index === 0) {
+            this.head = current.next;
+        } else {
+            while(count < index) {
+                count++;
+                previous = current;
+                current = current.next;
+            }
+            previous.next = current.next;
+        }
+        this.size--;
+    }
+    // Clear list
+    clearList() {
+        this.head = null;
+        this.size = 0;
+    }
+
+}
+const ll = new LinkedList();
+ll.inserFirst(100);
+ll.insertLast(500);
+ll.insertAt(600,2);
+// ll.removeAt(1)
+ll.displayList();
+// ll.printLinkedList(
 
 // const beasts = ['dog', 'bison', 'cow', 'duck', 'goat', 'mosquito', 'lion'];
 // console.log(beasts.indexOf('mosquito'));
@@ -45,33 +141,8 @@
 // }
 // combinationSum3()
 
-let combinationSums=(k,n)=>{
-    var result = [];
-    const goThrough = (idx, arr, sum) => {
-        if(sum>n){
-            return;
-        }
-            if(arr.length === k){
-                if(sum === n){
-                    result.push([...arr])
-                }
-                return;
-            }
-            for(let i = idx; i<10; i++){
-                // idx is a utility function that traverse thro properties on objects and arrays
-                arr.push(i);
-                sum +=i;
-                goThrough(i+1, sum, arr);
-                arr.pop(i);
-                sum -=i;
-            }
-        }
-        goThrough(1,0,[]);
-        return result;
 
-    }
-    combinationSums(4,10);
-    // what I have so far.. Needs alittle more work
+    // what I have learned so far.. Needs alittle more work
     // var k = 0;
     // var n = 0;
     // var nums = 1;
