@@ -72,6 +72,6 @@ function bubbleSort(arr) {
 // Question 5
 
 // Selection sort works by iterating through the list, finding the minimum value, and moving it to the beginning of the list .
-// The, ignoring the first position, which is now sorted, iterate through the list again finding the next
+// Then ignoring the first position, which is now sorted, iterate through the list again finding the next
 
 

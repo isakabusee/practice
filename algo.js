@@ -96,6 +96,3 @@ console.log(maximum);
 }
 emmitCommand([8,9,10,14,2]);
 
-let findString = () => {
-    
-}

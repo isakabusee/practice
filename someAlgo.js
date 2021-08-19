@@ -51,3 +51,33 @@ let someSpread=(myArray,result)=>{
     console.log(newArry);
 }
 someSpread([2,4,6,21,67,34,7,3,5])
+
+thisFunction=(myArr)=>{
+    myArr.splice(1,0,16);
+    console.log(myArr);
+    const result = myArr.filter((x)=>{return x<=5});
+    console.log(result)
+}
+thisFunction([8,4,2,5,1]);
+
+someStrings = ()=> {
+    let count = 0;
+    // const result = [];
+    for(let i=0; i<str1.length; i++){
+        for(let j=0; j<str2.length; j++){
+            if(str1[i]== str2[j]){
+                // result.push(str1[i]);
+                count+=1;
+            }
+            if(str1 == str2[i+1] && str2[j] == str2[j+1]){
+                count ++;
+            }
+
+        }
+        console.log(count);
+        // console.log(result);
+    }
+}
+const str1 = "This is something beautiful";
+const str2 = "Something beautiful is here"
+someStrings()

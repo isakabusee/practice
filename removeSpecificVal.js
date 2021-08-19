@@ -15,4 +15,24 @@ const index = arr.findIndex(el => el === numberToReplace);
 const outcomeArray = [...arr.slice(0, index), ...arr.slice(index + 1)]
 console.log(outcomeArray)
 
+const myArr = [12,3,4,5,6,2,6];
+const theNumberToReplace = 12;
+const index =myArr.findIndex(el => el === theNumberToReplace);
+console.log(myArr)
+const result = [...myArr.slice(0, 0, 12), ...myArr.slice(index + 1)]
+console.log(result)
+
+
+const searchArray = (Ar) => {
+    for(let i = 0; i<Ar.length-1; i++){
+        for(let j=0; j<Ar.length-1; j++){
+            if(Ar[j]%3 == 0){
+                console.log("FizzBuzz")
+            } else {
+                console.log("Fuzzy")
+            }
+        }
+    }
+}
+searchArray([12,3,4,5,6,2,6])
 

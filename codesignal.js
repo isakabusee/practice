@@ -64,3 +64,28 @@ let printArray=(arr)=>{
     
 }
 printArray([4,5,1,8,3,1,10,2])
+
+let inserAt=(myArr, val)=> {
+myArr.splice(0, 0, val)
+console.log(myArr);
+console.log(myArr[4]);
+}
+inserAt([3,2,7,9,5,11],48)
+
+// let someTwoArrays=(val)=>{
+//     const arr1 = [2,1,6,7];
+//     const arr2 = [5,6,2,8];
+//     for(let i =0; i<arr1.length; i++){
+//         for(let j = 0; j<arr2.length; j++){
+//              sum += j;
+//              console.log(sum)
+//             if(sum[arr1[i]] > sum[arr2[j]]){
+//                 return true;
+//             }
+//         }
+//         return false;
+//     }
+    
+
+// }
+// someTwoArrays

@@ -87,3 +87,21 @@ def strip (str4):
     for char in range (len(str4)):
         if str4[char] == "  ":
             str4.pop
+
+
+def saySomthi (greeting):
+    # var greeting = " Hello Isaac "
+    print (greeting)
+saySomthi(" Hello Isaac")
+
+def addSome (num1, num2):
+    print num1
+    print num2
+    print num1 + num2
+addSome(3,14)
+
+def someString (stringy):
+#  for i in len(stringy)
+#  print i
+    print stringy
+someString("This is something nice!")
