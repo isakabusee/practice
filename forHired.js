@@ -1,5 +1,4 @@
 let someFunct=(target, start, output, current_sum)=>{
-    
     if(current_sum === target){
         output.push(result.slice());
     }
