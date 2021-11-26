@@ -1,22 +1,11 @@
-// let printNums=(n) => {
-//     for(let i=1; i < n; i++){
-//         console.log(i)
-//     }
-
-// }
-// printNums(13)
-let battleShip =()=>{
-
-    const arr = [
-        [".",".",".",".",".",".",".",".",".","."],
-        [".",".",".",".",".",".",".",".",".","."]
-
-        
-    ]
-    for(let i=0; i<arr.length; i++){
-        for(let j=1; j<arr.length; j++){
-            console.log(arr[i][j])
-        }
+const interviewAlgo = (num) => {
+    if(num < -23245356 || num > 23245356 || num === 0){
+        return 0;
     }
+    const itsNegative = num < 0 ? true : false;
+    console.log(Math.log10(num))
 }
-battleShip()
+interviewAlgo([1243])
+
+const a = Math.abs(6)
+console.log(a);
